@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "71946663334",
+    "project_id": "flutterquiz-4bef4",
+    "storage_bucket": "flutterquiz-4bef4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71946663334:android:8b531300577dfb26228b67",
+        "android_client_info": {
+          "package_name": "io.kduy.quiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71946663334-onrjthnrj5sfmibbsi9q3grcli2l6sqg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.kduy.quiz",
+            "certificate_hash": "f849c3636b83e3e5c71b47100fc0afb5f504e2e3"
+          }
+        },
+        {
+          "client_id": "71946663334-k6iiromcb6gumas5b5nqfves6odhsor0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF7RE5JlTbrlQ09zIidbfaeV3E59kwO78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71946663334-k6iiromcb6gumas5b5nqfves6odhsor0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "71946663334-669sji2n4l68h113phelqso19cjmdk4q.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.kduy.quiz"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
