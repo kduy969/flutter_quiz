@@ -7,7 +7,14 @@ import 'popup_controller.dart';
 class Popup extends StatefulWidget {
   final Widget Function() popupBuilder;
   final Widget child;
-  const Popup({Key? key, required this.popupBuilder, required this.child})
+  final int width;
+  final int height;
+  const Popup(
+      {Key? key,
+      required this.popupBuilder,
+      required this.child,
+      required this.width,
+      required this.height})
       : super(key: key);
 
   @override
@@ -43,7 +50,21 @@ class PopupState extends State<Popup> {
 
   void _doShow() async {
     overlayEntry = OverlayEntry(builder: (buildCtx) {
-      logger.d(["Rebuild overlay"]);
+      //calculate popup position and size here
+
+      // get anchor size and position
+
+      // current widget render box
+      _childBox = context.findRenderObject() as RenderBox?;
+
+      // current overlay render box
+      _parentBox =
+          Overlay.of(context)?.context.findRenderObject() as RenderBox?;
+
+      final anchorSize = _childBox.size;
+      final anchorPosition = _childBox.localToGlobal();
+
+      final popupSize = logger.d(["Rebuild overlay"]);
       return Positioned(
         child: FadeIn(
           child: widget.popupBuilder(),
@@ -82,11 +103,6 @@ class PopupState extends State<Popup> {
   @override
   void didUpdateWidget(covariant Popup oldWidget) {
     // TODO: implement didUpdateWidget
-    // logger.d(["DID UPDATE", popupState.showing]);
-    // if (popupState.showing) {
-    //   logger.d(["MARK NEED BUILD"]);
-    //   overlayEntry?.markNeedsBuild();
-    // }
     super.didUpdateWidget(oldWidget);
   }
 
